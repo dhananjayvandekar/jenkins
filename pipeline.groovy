@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage ('pull') {
             steps {
-                git 'git branch{ 'main'}, {url: 'https://github.com/dhananjayvandekar/All-task-and-doc.-of-AWS.git'}
+                git 'git branch:'main', url: 'https://github.com/dhananjayvandekar/All-task-and-doc.-of-AWS.git'
             }
         }
         stage ('build') {
