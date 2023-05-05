@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage ('pull') {
             steps {
-                echo 'pull ok'
+                echo 'https://github.com/dhananjayvandekar/All-task-and-doc.-of-AWS.git'
             }
         }
         stage ('build') {
