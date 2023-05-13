@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage ('pull') {
             steps {
-                 git 'https://github.com/shubhamkalsait/studentapp-ui'
+                git 'https://github.com/shubhamkalsait/studentapp-ui master'
             }
         }
         stage ('build') {
@@ -13,9 +13,13 @@ pipeline {
         }
         stage ('test') {
             steps {
-                 sh '/opt/apache-maven/bin mvn sonar:sonar -Dsonar.projectKey=student.key -Dsonar.host.url=http://54.193.113.234:9000 -Dsonar.login=a0bb8570f57ed8843256f5b562fd4bd7f94388d8'
+                sh ' /opt/apache-maven/bin/mvn mvn sonar:sonar -Dsonar.projectKey=student.key -Dsonar.host.url=http://54.193.113.234:9000 -Dsonar.login=a0bb8570f57ed8843256f5b562fd4bd7f94388d8 '
             }
         }
+        stage ('pull') {
+            steps {
+                echo 'pull ok'
+            }
         }
-        
     }
+}
