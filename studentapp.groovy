@@ -20,5 +20,5 @@ pipeline {
                 echo 'deploy ok'
             }
         }
-        }
+        
     }
