@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage ('pull') {
             steps {
-                git 'https://github.com/shubhamkalsait/studentapp-ui master'
+                git 'https://github.com/shubhamkalsait/studentapp-ui '
             }
         }
         stage ('build') {
