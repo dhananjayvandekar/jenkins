@@ -1,12 +1,12 @@
 pipeline {
     agent any
     stages {
-        stage ('pull') {
+        stage('pull') {
             steps {
                 git 'https://github.com/shubhamkalsait/studentapp-ui'
             }
         }
-        stage ('build') {
+        stage('build') {
             steps {
                 sh '/opt/apache-maven/bin/mvn clean package'
             }
@@ -16,7 +16,7 @@ pipeline {
                 sh ' /opt/apache-maven/bin/mvn mvn sonar:sonar -Dsonar.projectKey=student.key -Dsonar.host.url=http://54.193.113.234:9000 -Dsonar.login=a0bb8570f57ed8843256f5b562fd4bd7f94388d8 '
             }
         }
-        stage ('pull') {
+        stage('pull') {
             steps {
                 echo 'pull ok'
             }
