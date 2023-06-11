@@ -23,7 +23,7 @@ pipeline {
         stage ('deploy') {
             steps { 
                 time out ( time: 1, unit:'HOURS') {
-                    waitforQualitygate abort pipeline: true
+                    waitforQualitygate abortPipeline: true
                 }
             }
         }
