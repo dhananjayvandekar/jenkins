@@ -24,7 +24,6 @@ pipeline {
             steps { 
                 time out ( time: 1, unit:'HOURS') {
                     waitforQualitygate abort pipeline: true
-                    credentialID: 'sonar-token'
                 }
             }
         }
