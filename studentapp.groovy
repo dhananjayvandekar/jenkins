@@ -20,7 +20,7 @@ pipeline {
           
             }
         }
-        stage ('deploy') {
+        stage ('quality gate') {
             steps { 
                 time out ( time: 1, unit:'HOURS') {
                     waitforQualitygate abortPipeline: true
